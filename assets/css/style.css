@@ -8,6 +8,7 @@
     --background-color: #f9f9f9;
     --text-color: #161616;
     --header-bg: #0081AF;
+    --header-bg-hover: #FFD700;
 }
 
 /* =======================
@@ -20,6 +21,7 @@
     --background-color: #121212;
     --text-color: #b5b6b7;
     --header-bg: #103243;
+    --header-bg-hover: #FFD700;
 }
 
 
@@ -83,7 +85,7 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: var(--tertiary-color);
+    color: var(--header-bg-hover);
 }
 
 /* =======================
@@ -140,14 +142,13 @@ header nav ul li a:hover {
 
 .artigo-lista article:hover {
     transform: translateY(-5px);
-        box-shadow: 0 4px 8px var(--tertiary-color);
-
-
+    box-shadow: 0 4px 8px var(--tertiary-color);
 }
 
 .artigo-lista article h3 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-bottom: 0.5rem;
+    color: var(--tertiary-color);
 }
 
 .artigo-lista article h3 a {
@@ -269,6 +270,36 @@ transform: none;
 
 #contato a:hover {
     color: var(--tertiary-color);
+}
+
+/* Proximo artigo */
+.next-article {
+    text-align: right; /* seta no canto direito */
+    margin: 2rem 0;
+}
+
+.next-link {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--tertiary-color);
+    font-size: 1.1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.next-link:hover {
+    color: var(--secondary-color);
+}
+
+.next-link .arrow {
+    font-size: 1.3rem;
+    transition: transform 0.3s ease;
+}
+
+.next-link:hover .arrow {
+    transform: translateX(5px); /* animação da seta ao passar o mouse */
 }
 
 

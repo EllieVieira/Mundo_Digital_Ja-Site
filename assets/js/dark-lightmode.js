@@ -5,9 +5,9 @@ const themeIcon = document.getElementById("theme-toggle");
 // Função para atualizar a logo conforme o tema
 function updateLogo() {
   if (html.getAttribute("data-theme") === "dark") {
-    logo.src = "assets/img/logo-escura.png"; // versão para fundo escuro
+    logo.src = "/assets/img/logo-escura.png"; // versão para fundo escuro
   } else {
-    logo.src = "assets/img/logo-clara.png"; // versão para fundo claro
+    logo.src = "/assets/img/logo-clara.png"; // versão para fundo claro
   }
 }
 
