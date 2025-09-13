@@ -1,0 +1,314 @@
+/* =======================
+   Root para modo claro
+======================= */
+:root {
+    --primary-color: #0081AF;
+    --secondary-color: #00ABE7;
+    --tertiary-color: #195267;
+    --background-color: #f9f9f9;
+    --text-color: #161616;
+    --header-bg: #0081AF;
+}
+
+/* =======================
+   Root para modo escuro
+======================= */
+[data-theme="dark"] {
+    --primary-color: #103243;
+    --secondary-color: #1a4d67;
+    --tertiary-color: #99DDFF;
+    --background-color: #121212;
+    --text-color: #b5b6b7;
+    --header-bg: #103243;
+}
+
+
+/* =======================
+   Reset básico
+======================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #000000;
+    background-color: var(--background-color);
+}
+
+body::selection{
+    background-color: var(--secondary-color);
+    color: #ffffff;
+
+}
+span{
+    color: var(--tertiary-color);
+    font-weight: 700;
+}
+
+/* =======================
+   Cabeçalho
+======================= */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--header-bg);
+    color: #fff;
+}
+
+header .logo a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: var(--tertiary-color);
+}
+
+/* =======================
+   Seção Hero (Banner)
+======================= */
+#hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: #fff;
+}
+
+#hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#hero p {
+    font-size: 1.2rem;
+}
+
+/* =======================
+   Seção de Artigos
+======================= */
+#artigos {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#artigos h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+        color: var(--tertiary-color);
+
+}
+
+.artigo-lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.artigo-lista article {
+    background-color: var(--background-color);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--tertiary-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: var(--text-color);
+}
+
+
+.artigo-lista article:hover {
+    transform: translateY(-5px);
+        box-shadow: 0 4px 8px var(--tertiary-color);
+
+
+}
+
+.artigo-lista article h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.artigo-lista article h3 a {
+    text-decoration: none;
+    color: var(--tertiary-color);
+    transition: color 0.3s ease;
+}
+
+.artigo-lista article h3 a:hover {
+    color: var(--secondary-color);
+}
+
+.artigo-lista article p, li, .sobre {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    text-align: justify;
+    margin-bottom: 1rem;
+}
+
+.artigo-lista article li{
+    list-style-position: inside;
+}
+
+.artigo-lista article li::marker{
+    color: var(--secondary-color);
+}
+
+.artigo-lista .article-text:hover{
+transform: none;
+}
+
+/* =======================
+   Página de Contato
+======================= */
+#contato {
+    padding: 4rem 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#contato h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--tertiary-color);
+}
+
+#contato form {
+    background-color: var(--background-color);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--tertiary-color);
+    display: flex;
+    flex-direction: column;
+}
+
+#contato label {
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+#contato input,
+#contato textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 6px;
+    font-size: 1rem;
+    color: var(--text-color);
+    background-color: #fff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+[data-theme="dark"] #contato input,
+[data-theme="dark"] #contato textarea {
+    background-color: #1c1c1c;
+    color: var(--text-color);
+    border: 1px solid var(--primary-color);
+}
+
+#contato input:focus,
+#contato textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 5px var(--secondary-color);
+}
+
+#contato button {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+#contato button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px var(--tertiary-color);
+}
+
+/* Link de e-mail */
+#contato p {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+#contato a {
+    color: var(--secondary-color);
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#contato a:hover {
+    color: var(--tertiary-color);
+}
+
+
+/* =======================
+   Rodapé
+======================= */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--header-bg);
+    color: #ffffff;
+    margin-top: 4rem;
+}
+
+/* =======================
+   Responsividade
+======================= */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .artigo-lista {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =======================
+   Responsividade do formulário
+======================= */
+@media (max-width: 600px) {
+    #contato form {
+        padding: 1.5rem;
+    }
+
+    #contato button {
+        font-size: 0.9rem;
+        padding: 0.7rem;
+    }
+}
+
+

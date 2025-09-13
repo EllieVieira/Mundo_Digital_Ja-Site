@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Entre em contato com o Mundo Digital Já. Tire suas dúvidas, envie sugestões ou fale diretamente conosco.">
+    <meta name="keywords" content="contato, fale conosco, suporte, email, mundo digital já, formulário de contato">
+
+    <title>Contato | Mundo Digital Já</title>
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- Cabeçalho principal -->
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="assets/img/logo.png" alt="Logo Mundo Digital Já" width="100px"></a>
+        </div>
+        <nav>
+            <ul>
+                <i id="theme-toggle" class="bi bi-moon-stars"></i>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="tutoriais.html">Tutoriais</a></li>
+                <li><a href="dicas.html">Dicas</a></li>
+                <li><a href="contato.html" class="active">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <section id="hero">
+            <h1>Entre em Contato</h1>
+            <p>Dicas, sugestões de temas e dúvidas, entre em contato.</p>
+        </section>
+
+        <section id="contato">
+            <form action="mailto:elyvieira95@gmail.com?subject=Contato do Site" method="post" enctype="text/plain">
+                <label for="nome">Nome:</label><br>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required><br><br>
+
+                <label for="email">E-mail:</label><br>
+                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required><br><br>
+
+                <label for="mensagem">Mensagem:</label><br>
+                <textarea id="mensagem" name="mensagem" rows="6" placeholder="Escreva sua mensagem aqui"
+                    required></textarea><br><br>
+
+                <button type="submit">Enviar</button>
+            </form>
+
+            <p>Se preferir, envie um e-mail diretamente:
+                <a href="mailto: elyvieira95@gmail.com">elyvieira95@gmail.com</a>
+            </p>
+        </section>
+    </main>
+
+    <script src="assets/js/dark-lightmode.js" defer></script>
+
+    <!-- Rodapé -->
+    <footer>
+        <p> 2025 Mundo Digital Já. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>
