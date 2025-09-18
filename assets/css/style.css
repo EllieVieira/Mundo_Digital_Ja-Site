@@ -42,12 +42,13 @@ body {
     background-color: var(--background-color);
 }
 
-body::selection{
+body::selection {
     background-color: var(--secondary-color);
     color: #ffffff;
 
 }
-span{
+
+span {
     color: var(--tertiary-color);
     font-weight: 700;
 }
@@ -120,7 +121,7 @@ header nav ul li a:hover {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 2rem;
-        color: var(--tertiary-color);
+    color: var(--tertiary-color);
 
 }
 
@@ -162,23 +163,25 @@ header nav ul li a:hover {
     color: var(--secondary-color);
 }
 
-.artigo-lista article p, li, .sobre {
+.artigo-lista article p,
+li,
+.sobre {
     font-size: 1.2rem;
     color: var(--text-color);
     text-align: justify;
     margin-bottom: 1rem;
 }
 
-.artigo-lista article li{
+.artigo-lista article li {
     list-style-position: inside;
 }
 
-.artigo-lista article li::marker{
+.artigo-lista article li::marker {
     color: var(--secondary-color);
 }
 
-.artigo-lista .article-text:hover{
-transform: none;
+.artigo-lista .article-text:hover {
+    transform: none;
 }
 
 /* =======================
@@ -275,7 +278,8 @@ transform: none;
 
 /* Proximo artigo */
 .next-article {
-    text-align: right; /* seta no canto direito */
+    text-align: right;
+    /* seta no canto direito */
     margin: 2rem 0;
 }
 
@@ -300,7 +304,8 @@ transform: none;
 }
 
 .next-link:hover .arrow {
-    transform: translateX(5px); /* animação da seta ao passar o mouse */
+    transform: translateX(5px);
+    /* animação da seta ao passar o mouse */
 }
 
 
@@ -327,6 +332,16 @@ footer {
     .artigo-lista {
         grid-template-columns: 1fr;
     }
+
+
+    @media (max-width: 408px) {
+        header nav ul li {
+            list-style: none;
+            display: flex;
+            gap: 1.1rem;
+            font-size: 0.7rem;
+        }
+    }
 }
 
 /* =======================
@@ -342,5 +357,3 @@ footer {
         padding: 0.7rem;
     }
 }
-
-
