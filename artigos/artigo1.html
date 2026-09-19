@@ -16,7 +16,8 @@
     <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+
 
 </head>
 
@@ -24,7 +25,7 @@
     <!-- Cabeçalho principal -->
     <header>
         <div class="logo">
-            <a href="/index.html"><img src="logo" alt="Logo do site" width="100px"></a>
+            <a href="/index.html"><img src="../assets/img/logo.png" alt="Logo do site" width="100px"></a>
         </div>
         <nav>
             <ul>
@@ -47,6 +48,13 @@
             <h1>Mundo Digital Já</h1>
             <p>Seu guia para navegar e aprender sobre o mundo digital já.</p>
         </section>
+
+        <!-- Controle de Fonte -->
+        <div class="controle-fonte">
+            <button onclick="diminuirFonte()">A−</button>
+            <button onclick="tamanhoNormal()">A</button>
+            <button onclick="aumentarFonte()">A+</button>
+        </div>
 
         <!-- Seção de artigos / tutoriais -->
         <section id="artigos">
@@ -103,7 +111,8 @@
                     <ul>
                         <li>Abra programas de edição de texto (<span>Word</span>, <span>Bloco de Notas</span> ou
                             <span>Google Docs</span>) e
-                            pratique criar documentos simples.</li>
+                            pratique criar documentos simples.
+                        </li>
                         <li>Salve seus arquivos em <span>pastas organizadas</span>, usando nomes descritivos e datas
                             quando necessário.</li>
                         <li>Aprenda a diferenciar tipos de arquivos (como .docx, .pdf, .txt) e escolha o
@@ -174,6 +183,7 @@
     </main>
 
     <script src="/assets/js/dark-lightmode.js" defer></script>
+    <script src="../assets/js/font-size.js" defer></script>
 
     <!-- Rodapé -->
     <footer>
